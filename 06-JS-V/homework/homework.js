@@ -8,12 +8,25 @@ function crearUsuario() {
   // {{nombre}} debe ser el nombre definido en cada instancia
   // Devuelve la clase
   // Tu código:
+  function usuario(opciones){
+    this.usuario = opciones.usuario
+    this.nombre= opciones.nombre
+    this.email= opciones.email
+    this.password= opciones.password
+  }
+    usuario.prototype.saludar = function(){
+      return 'Hola, mi nombre es ' + this.nombre 
+    }
+return usuario
 }
 
 function agregarMetodoPrototype(Constructor) {
   // Agrega un método al Constructor del `prototype`
   // El método debe llamarse "saludar" y debe devolver la string "Hello World!"
   // Tu código:
+  Constructor.prototype.saludar = function(){
+    return 'Hello World!'
+  }
 }
 
 function agregarStringInvertida() {
@@ -22,8 +35,14 @@ function agregarStringInvertida() {
   // Ej: 'menem'.reverse() => menem
   // 'toni'.reverse() => 'inot'
   // Pista: Necesitarás usar "this" dentro de "reverse"
+  String.prototype.reverse = function(){
+    var str_rev =''
+    //for (var i = this.length - 1; i>=0; i--){
+    for (var i = 0 ;i <= this.length; i++){  
+        str_rev = this.charAt(i)+str_rev  }
+    return str_rev
 }
-
+}
 // ---------------------------------------------------------------------------//
   //Crea el constructor de la clase "Persona"
   //Debe tener las propiedades: "nombre", "apellido", "edad" y "domicilio"
@@ -34,11 +53,22 @@ function agregarStringInvertida() {
     //   Edad: 22,
     //   Domicilio: 'Saavedra 123'
     //  }
-
-  class Persona {
-    constructor(/*Escribir los argumentos que recibe el constructor*/) {
-      // Crea el constructor:
-
+    class Persona {
+      constructor(nombre, apellido, edad, domicilio) {
+        // Tu código:
+        this.nombre = nombre,
+        this.apellido = apellido,
+        this.edad = edad,
+        this.domicilio = domicilio
+        this.detalle = function() {
+          return { 
+            Nombre: this.nombre,
+            Apellido: this.apellido,
+            Edad: this.edad,
+            Domicilio: this.domicilio
+          }
+        }
+      }
     }
 }
 
