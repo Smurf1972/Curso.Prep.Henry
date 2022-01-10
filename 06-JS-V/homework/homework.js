@@ -40,8 +40,7 @@ function agregarStringInvertida() {
     //for (var i = this.length - 1; i>=0; i--){
     for (var i = 0 ;i <= this.length; i++){  
         str_rev = this.charAt(i)+str_rev  }
-    return str_rev
-}
+    return str_rev}
 }
 // ---------------------------------------------------------------------------//
   //Crea el constructor de la clase "Persona"
@@ -65,8 +64,7 @@ function agregarStringInvertida() {
             Nombre: this.nombre,
             Apellido: this.apellido,
             Edad: this.edad,
-            Domicilio: this.domicilio
-          }
+            Domicilio: this.domicilio }
         }
       }
     }
