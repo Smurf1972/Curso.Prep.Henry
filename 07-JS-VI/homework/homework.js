@@ -45,27 +45,33 @@ function map(array, cb) {
   // Itera sobre cada valor en "array", pásalo a `cb` y luego ubicar el valor devuelto por `cb` en un nuevo array
   // El nuevo array debe tener la misma longitud que el array del argumento
   //Tu código:
+  // quedó mocho de la clase
+  //let arraycb = []
+  //for (let=1)
+
   //var array = [1,2,3,4,5]
   //function cb (e){
-  //var nuevoArray = []
-  //for(var i = 0; i < array.length; i++) {
-  //   nuevoArray.push(cb(array[i]))
-  //   nuevoArray[i] = cb(array[i])}
+  var nuevoArray = []
+  for(var i = 0; i < array.length; i++) {
+     nuevoArray.push(cb(array[i]))
+     nuevoArray[i] = cb(array[i])}
+  }
+  return nuevoArray
   //}
+  //var nuevoArray = array.map(function(el) {
+  //  return cb(el)})
   //return nuevoArray
-  //}
-  var nuevoArray = array.map(function(el) {
-    return cb(el);
-  });
-  return nuevoArray;
-}
+
 function filter(array) {
   //Filtrar todos los elementos del array que comiencen con la letra "a".
   //Devolver un nuevo array con los elementos que cumplen la condición
   //Tu código:
   var nuevoArray = []
+  var str_array = String
   for(let i = 0; i<array.length; i++) {
-    if(array[i][0] === 'a') {
+    str_array = array[i].toString()
+    if (str_array.charAt(0) === 'a') {
+    //if(array[i][0] === 'a') {
       nuevoArray.push(array[i])
     }
   }

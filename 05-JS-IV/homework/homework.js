@@ -6,20 +6,21 @@ function crearGato(nombre, edad) {
   // Agrega un método (funcion) llamado "meow" que devuelva el string "Meow!"
   // Devuelve el objeto
   // Tu código:
-  var obj = {
+  var nobjeto = 
+  {
     nombre: nombre,
     edad: edad,
     meow: function() {
-      return 'Meow!'
-    }
+          return 'Meow!'}
   }
-  return obj 
+  return nobjeto 
 }
 
 function agregarPropiedad(objeto, property) {
   // Agrega una propiedad al objeto (argumento "objeto") con el valor `null`
   // Devuelve el objeto
-  // NOTA: El nombre de la propiedad no es "propiedad", el nombre es el valor del argumento llamado "property" (una cadena/string)
+  // NOTA: El nombre de la propiedad no es "propiedad", 
+  // el nombre es el valor del argumento llamado "property" (una cadena/string)
   // Tu código:
   objeto[property] = null
   return objeto 
@@ -54,22 +55,23 @@ function nuevoUsuario(nombre, email, password) {
   // Crea un nuevo objeto con las propiedades coincidiendo con los argumentos que se pasan a la función
   // Devuelve el objeto
   // Tu código:
-  var objeto = {
+  var New_objeto = {
     nombre: nombre,
     email: email,
     password: password,
   }
-  return objeto
+  return New_objeto
 }
 
 function tieneEmail(usuario) {
   // Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
   // De lo contratio, devuelve "false"
   // Tu código:
-  if(usuario['email']) {  
-    return true} 
+  //if(usuario['email'] == undefined) { ** Igual Funciona
+   if(usuario.email== null) {  
+    return false} 
   else {
-    return false}
+    return true}
 }
 
 function tienePropiedad(objeto, propiedad) {
@@ -77,6 +79,7 @@ function tienePropiedad(objeto, propiedad) {
   // "propiedad" es un string
   // De lo contrario, devuelve "false"
   // Tu código:
+  // if(objeto.hasOwnproperty(propiedad)) retun true return false ** Funciona igual
   if(objeto[propiedad]) {  
     return true} 
   else {
@@ -147,9 +150,12 @@ function agregarMetodoCalculoDescuento(producto) {
   // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
-  producto.agregarMetodoCalculoDescuento() = function() {
-   producto.precio = producto.precio - (producto.precio * producto.porcentajeDeDescuento)  
-   return producto.precio  
+  producto.calcularPrecioDescuento = function() {
+
+  //  return this.precio - ( this.precio * this.porcentajeDeDescuento )}
+  //return producto
+   this.precio = this.precio - (this.precio * this.porcentajeDeDescuento)  
+   return this.precio  
   }
   return producto
 }
