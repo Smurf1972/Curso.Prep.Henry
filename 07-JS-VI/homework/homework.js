@@ -25,6 +25,8 @@ function sumarArray(numeros, cb) {
   // Pasa el resultado a `cb`
   // No es necesario devolver nada
   //Tu código:
+ // let suma = numeros.reduce(function(a,v)){ return a+v} ** Funciona igual
+ 
   var numeros = [1,2,3,4,5]
   var suma = 0
   for(var i = 0; i < numeros.length; i++) {
@@ -38,6 +40,9 @@ function forEach(array, cb) {
   //Tu código:
   for(var i = 0; i < array.length; i++) {
     cb(array[i])}
+  // o
+  //array.forEach(function(e)){ 
+  //cb(e)})  
 }
 
 function map(array, cb) {
@@ -47,7 +52,9 @@ function map(array, cb) {
   //Tu código:
   // quedó mocho de la clase
   //let arraycb = []
-  //for (let=1)
+  //for (let 1=0;i<array.length;i++){
+  //  Arraycb.push(cb(array[i]))
+  //}
 
   //var array = [1,2,3,4,5]
   //function cb (e){
@@ -55,17 +62,21 @@ function map(array, cb) {
   for(var i = 0; i < array.length; i++) {
      nuevoArray.push(cb(array[i]))
      nuevoArray[i] = cb(array[i])}
+     return nuevoArray
   }
-  return nuevoArray
+  
   //}
-  //var nuevoArray = array.map(function(el) {
-  //  return cb(el)})
+  //var nuevoArray = array.map(function(e) {
+  //  return cb(e)})
   //return nuevoArray
 
 function filter(array) {
   //Filtrar todos los elementos del array que comiencen con la letra "a".
   //Devolver un nuevo array con los elementos que cumplen la condición
   //Tu código:
+  // return array.filter(e=> e[0]==='a') 
+  // o
+  // return array.filter(e=> e[0]==='a')
   var nuevoArray = []
   var str_array = String
   for(let i = 0; i<array.length; i++) {
